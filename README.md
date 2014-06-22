@@ -53,7 +53,7 @@ colnames(df)[2] <- "Label"
 ```
 
 ## Now we extract only mean and std measurements:
-```{r]
+```{r}
 df[,c("tBodyAcc-mean()-X","tBodyAcc-mean()-Y","tBodyAcc-mean()-Z","tBodyAcc-std()-X","tBodyAcc-std()-Y","tBodyAcc-std()-Z")]
 
 df_tidy <- ddply(df, .(Subject,Label), colwise(mean))
